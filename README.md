@@ -27,20 +27,21 @@ This Helm chart simplifies the deployment of Browserless on Kubernetes, allowing
 
 To get started with the Browserless Helm chart, follow these steps:
 
-1. Add the Browserless Helm repository:
+1. Add the my personal Helm repository:
 
-   ```bash
-   helm repo add REPO_NAME REPO_URL
-   helm repo update
-   ```
+```bash
+helm repo add shivam-charts https://shivamkumar2002.github.io/helm-charts
+helm repo update
+```
 
-2. Install the Browserless chart:
 
-   ```bash
-   helm install browserless REPO_NAME/browserless --namespace browserless --create-namespace --values my-values.yaml
-   ```
+2. Install the `browserless` chart:
 
-   Replace `my-values.yaml` with the path to your custom values file if you have one.
+```bash
+helm install browserless shivam-charts/browserless --namespace browserless --create-namespace --values my-values.yaml
+```
+
+Replace `my-values.yaml` with the path to your custom values file if you have one.
 
 3. Access Browserless through your Kubernetes service or Ingress, depending on your configuration.
 
@@ -58,7 +59,7 @@ For detailed information on how to configure each aspect of the Browserless Helm
 To upgrade the Browserless deployment with new values or a new version of the chart, use the following Helm command:
 
 ```bash
-helm upgrade browserless REPO_NAME/browserless --namespace browserless --values my-new-values.yaml
+helm upgrade browserless shivam-charts/browserless --namespace browserless --values my-new-values.yaml
 ```
 
 Ensure that `my-new-values.yaml` contains your updated configuration settings.
@@ -176,6 +177,8 @@ If you encounter any issues or have questions about this, please open an issue i
 
 **NOTE:** This chart is not affiliated with official browserless repo in any way.
 
-## TODO
 
-- [ ] Add REPO_NAME and REPO_URL.
+## Credits
+
+- [Browserless](https://github.com/browserless/browserless)
+- [Helm](https://helm.sh)
